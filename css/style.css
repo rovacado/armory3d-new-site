@@ -1,0 +1,21 @@
+.ro-text-content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+}
+
+.ro-text-header {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.3em;
+}
+
+.ro-background-red {
+  background-color: crimson;
+}
+
+.ro-logocolor {
+  color: white;
+}
+
+.ro-footer {
+  flex: 1;
+}
