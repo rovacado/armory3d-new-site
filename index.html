@@ -2,184 +2,254 @@
 <html lang="en">
 
 <head>
-    <title>Armory | 3D Game Engine for Blender</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
-    <!-- Font Loading -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+  <title>Armory | 3D Game Engine for Blender</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css">
+  <!-- Font Loading -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="uk-flex uk-flex-column" uk-height-viewport>
-    <!-- Disappearing Header -->
-    <div class="uk-section uk-section-secondary uk-padding-remove" style="z-index: -1;" uk-sticky="bottom: #offset">
-        <div class="uk-cover-container uk-height-medium uk-text-center">
-            <img src="img/Cover.svg" alt="Cover Image" uk-cover>
-            <div class="uk-position-center uk-background-secondary uk-light">
-                <img src="img\Logo.png" alt="Template Logo">
-                <div class="uk-text-lead uk-text-uppercase ro-text-header">ARMORY3D</div>
-            </div>
-        </div>
+<body class="uk-flex uk-flex-column ro-text-content" uk-height-viewport>
+  <!-- Disappearing Header -->
+  <div class="uk-section uk-section-secondary uk-padding-remove" style="z-index: -1;" uk-sticky="bottom: #offset">
+    <div class="uk-cover-container uk-height-medium uk-text-center">
+      <img src="img/FeaturedCover.jpg" alt="Cover Image" uk-cover>
+      <div class="uk-position-center uk-background-secondary uk-light">
+        <img src="img\Logo.png" alt="Template Logo">
+        <div class="uk-text-lead uk-text-uppercase ro-text-logo uk-margin-small-top uk-margin-small-bottom">ARMORY3D</div>
+      </div>
     </div>
-    <!-- Navagation -->
-    <div class="uk-section uk-padding-remove">
-        <!-- large screen nav -->
-        <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-            <div class="uk-background-secondary uk-light">
-                <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-                    <div class="uk-navbar-center">
-                        <ul class="uk-navbar-nav uk-text-capitalize">
-                            <li>
-                                <a href="#top" uk-scroll="duration: 500">home</a>
-                            </li>
-                            <li>
-                                <a href="#">features</a>
-                                <div class="uk-navbar-dropdown uk-width-auto uk-text-center uk-padding-small" uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify;">
-                                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                                        <li>
-                                            <a href="#workflow" uk-scroll="duration: 500;offset: 50">workflow</a>
-                                        </li>
-                                        <li>
-                                            <a href="#renderer" uk-scroll="duration: 500;offset: 50">renderer</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nodes" uk-scroll="duration: 500;offset: 50">nodes</a>
-                                        </li>
-                                        <li>
-                                            <a href="#engine" uk-scroll="duration: 500;offset: 50">engine</a>
-                                        </li>
-                                        <li>
-                                            <a href="#platforms" uk-scroll="duration: 500;offset: 50">platforms</a>
-                                        </li>
-                                        <li>
-                                            <a href="#animations" uk-scroll="duration: 500;offset: 50">Animations</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#">news</a>
-                            </li>
-                            <li>
-                                <a href="#">manual</a>
-                            </li>
-                            <li>
-                                <a href="#">community</a>
-                            </li>
-                            <li>
-                                <a href="#">download</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="uk-navbar-right">
-                        <ul class="uk-navbar-nav uk-text-capitalize">
-                            <li>
-                                <a href="https://www.patreon.com/bePatron?u=3705855">
-                                    <img src="img/Patron.png" alt="Patreon Pledge Badge">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- mobile nav-->
-        <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;"
-            uk-sticky-fixed>
-            <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
+  </div>
+  <!-- Navagation -->
+  <div class="uk-section uk-padding-remove">
+    <!-- large screen nav -->
+    <div class="uk-visible@l" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+      <div class="uk-background-secondary uk-light">
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+          <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav uk-text-capitalize">
+              <li>
+                <a href="#top" uk-scroll="duration: 500">home</a>
+              </li>
+              <li>
+                <a href="#">features</a>
+                <div class="uk-navbar-dropdown uk-width-auto uk-text-center uk-padding-small" uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify;">
+                  <ul class="uk-nav uk-navbar-dropdown-nav">
+                    <li><a href="#workflow" uk-scroll="duration: 500;offset: 0">workflow</a></li>
+                    <li><a href="#renderer" uk-scroll="duration: 500;offset: 0">renderer</a></li>
+                    <li><a href="#nodes" uk-scroll="duration: 500;offset: 0">nodes</a></li>
+                    <li><a href="#engine" uk-scroll="duration: 500;offset: 0">engine</a></li>
+                    <li><a href="#platforms" uk-scroll="duration: 500;offset: 0">platforms</a></li>
+                    <li><a href="#animations" uk-scroll="duration: 500;offset: 0">Animations</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">news</a></li>
+              <li><a href="#">manual</a></li>
+              <li><a href="community.html">community</a></li>
+              <li><a href="#">download</a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-text-capitalize">
+              <li><a href="https://www.patreon.com/bePatron?u=3705855"><img src="img/Patron.png" alt="Patreon Pledge Badge"></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- mobile nav-->
+    <div class="uk-background-secondary uk-light uk-hidden@l uk-position-fixed uk-position-bottom-left uk-width-1-1" style="z-index: 980; border:0;" uk-sticky-fixed>
+      <button class="uk-button uk-button-default uk-width-1-1" style="border:0;" type="button" uk-toggle="target: #offcanvas-slide">
                 <span uk-icon="icon: menu"></span> MENU</button>
-        </div>
-        <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
-            <div class="uk-offcanvas-bar">
-                <ul class="uk-nav uk-nav-default">
-                    <li>
-                        <a href="#top" uk-scroll="duration: 500" class="uk-offcanvas-close uk-position-left uk-position-relative">Home</a>
-                    </li>
-                    <li class="uk-nav-divider"></li>
-                    <li>
-                        <a href="#">news</a>
-                    </li>
-                    <li>
-                        <a href="#">manual</a>
-                    </li>
-                    <li>
-                        <a href="#">community</a>
-                    </li>
-                    <li>
-                        <a href="#">download</a>
-                    </li>
-                    <li class="uk-nav-divider"></li>
-                    <li class="uk-nav-header">Features</li>
-                    <li>
-                        <a href="#workflow" uk-scroll="duration: 500;offset: 0">workflow</a>
-                    </li>
-                    <li>
-                        <a href="#renderer" uk-scroll="duration: 500;offset: 0">renderer</a>
-                    </li>
-                    <li>
-                        <a href="#nodes" uk-scroll="duration: 500;offset: 0">nodes</a>
-                    </li>
-                    <li>
-                        <a href="#engine" uk-scroll="duration: 500;offset: 0">engine</a>
-                    </li>
-                    <li>
-                        <a href="#platforms" uk-scroll="duration: 500;offset: 0">platforms</a>
-                    </li>
-                    <li>
-                        <a href="#animations" uk-scroll="duration: 500;offset: 0">Animations</a>
-                    </li>
-                    <li class="uk-nav-divider"></li>
-                    <li>
-                        <a href="https://www.patreon.com/bePatron?u=3705855">
-                            <img src="img/Patron.png" alt="Patreon Pledge Badge">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
     </div>
-    <!-- Main Content -->
-    <div class="uk-section uk-section-secondary uk-section-medium ro-text-content">
-        <div class="uk-container uk-container-large">
-            <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
-                <div>Content Section One: Grid box One</div>
-                <div>Content Section One: Grid box Two</div>
-            </div>
-        </div>
+    <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
+      <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-default">
+          <li>
+            <a href="#top" uk-scroll="duration: 500" class="uk-offcanvas-close uk-position-left uk-position-relative">Home</a>
+          </li>
+          <li class="uk-nav-divider"></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">manual</a></li>
+          <li><a href="community.html">community</a></li>
+          <li><a href="#">download</a></li>
+          <li class="uk-nav-divider"></li>
+          <li class="uk-nav-header">Features</li>
+          <li><a href="#workflow" uk-scroll="duration: 500;offset: 0">workflow</a></li>
+          <li><a href="#renderer" uk-scroll="duration: 500;offset: 0">renderer</a></li>
+          <li><a href="#nodes" uk-scroll="duration: 500;offset: 0">nodes</a></li>
+          <li><a href="#engine" uk-scroll="duration: 500;offset: 0">engine</a></li>
+          <li><a href="#platforms" uk-scroll="duration: 500;offset: 0">platforms</a></li>
+          <li><a href="#animations" uk-scroll="duration: 500;offset: 0">Animations</a></li>
+          <li class="uk-nav-divider"></li>
+          <li><a href="https://www.patreon.com/bePatron?u=3705855"><img src="img/Patron.png" alt="Patreon Pledge Badge"></a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="uk-section uk-section-primary uk-section-medium ro-text-content">
-        <div class="uk-container uk-container-large">
-            <div class="uk-child-width-expand@l uk-text-center uk-grid-medium" uk-grid>
-                <div>Content Section Two: Grid box One</div>
-                <div>Content Section Two: Grid box Two</div>
-                <div>Content Section Two: Grid box Three</div>
-            </div>
+  </div>
+  <!-- Main Content -->
+  <div class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large">
+      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
+        <div>
+          <h2 class="uk-heading-divider ro-text-header">In development!</h2>
+          <p>Before proceeding, please note that all materials currently available are still works in progress.</p>
+          <p>The Armory SDK is released as an
+            <span class="uk-text-bold" style="font-style: italic;">early preview</span>. Any kind of support & feedback is greatly welcome!</p>
         </div>
-    </div>
-    <!-- Footer Content -->
-    <div class="uk-section uk-section-secondary uk-section-small ro-text-content ro-footer">
-        <div class="uk-container uk-container-small uk-text-center uk-text-muted">
-            <div class="uk-child-width-expand uk-text-center uk-grid-large" uk-grid>
-                <div class="uk-width-1-1">Copy notice or other important footer text</div>
-                <div class="uk-text-left">Footer Left One
-                    <br>Footer Left Two
-                    <br>Footer Left Three
-                    <br>Footer Left Four</div>
-                <div class="uk-text-right">Footer Right One
-                    <br>Footer Right Two
-                    <br>Footer Right Three
-                    <br>Footer Right Four</div>
-            </div>
+        <div>
+          <iframe src="https://www.youtube-nocookie.com/embed/2-xkLH5FjPw?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="100%" height="315" frameborder="0" allowfullscreen uk-responsive uk-video="automute: true;autoplay: false"></iframe>
         </div>
+      </div>
     </div>
-    <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js" integrity="sha256-2O4R+j0Pq+XLeUlXkPznJ0HrSkHA9keocNhV+csu6Zo="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js" integrity="sha256-w38UjohynFpNOMjhZJ/oUIo/Md7D4tpQQJri5qDDTlE="
-        crossorigin="anonymous"></script>
+  </div>
+  <div id="workflow" class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large">
+      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
+        <div class="uk-flex-last uk-flex-first@l">
+          <img src="img/Workflow.jpg" alt="Realtime Workflow all done in blender">
+        </div>
+        <div class="uk-flex-first uk-flex-last@l">
+          <h2 class="uk-heading-divider ro-text-header">Use Blender for it all</h2>
+          <p>
+            Armory is an open-source 3D game engine with full Blender integration, turning it into a complete game development tool. The result is a unified workflow from start to finish, making you work faster. No more jumping between different applications to constantly
+            export data from one to another.</p>
+          <p>
+            Behind the scenes, Armory is powered by open-source technology. Utilizing Kha - multimedia framework and Haxe - cross platform toolkit, to provide top class performance and portability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="renderer" class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large">
+      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
+        <div>
+          <h2 class="uk-heading-divider ro-text-header">State of the Art Renderer</h2>
+          <p>
+            Serious effort has been put into the render system. A render path is fully scriptable with deferred and forward paths supported out of the box. To define materials, Armory is based on the Cycles nodes. Materials are pre-compiled into shaders suitable
+            for real-time rendering.
+          </p>
+          <ul class="uk-list">
+            <li>Physically based</li>
+            <li>Cycles material nodes</li>
+            <li>Voxel-based global illumination</li>
+            <li>Temporal anti-aliasing</li>
+            <li>Tessellated displacement</li>
+            <li>Screen-space raymarching</li>
+            <li>HDR pipeline</li>
+          </ul>
+        </div>
+        <div>
+          <img src="img/Renderer.jpg" alt="Armory Rendering Pipeline">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="nodes" class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large">
+      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
+        <div class="uk-flex-last uk-flex-first@l"><img src="img/Nodes.jpg" alt="Using Nodes from Blender in Armory"></div>
+        <div class="uk-flex-first uk-flex-last@l">
+          <h2 class="uk-heading-divider ro-text-header">Use Nodes</h2>
+          <p>
+            Armory is oriented towards nodes. For materials, a subset of standard Cycles nodes is used. Every scene created in Armory is renderable as-is in Cycles using path-tracing. This makes it possible to use Cycles for light baking with no separate setup. Performance
+            remains the priority. To define game behaviour, a system of logic nodes is developed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="engine" class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large">
+      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
+        <div>
+          <h2 class="uk-heading-divider ro-text-header">Game Engine</h2>
+          <p>
+            Everything is bundled to provide the ultimate game development tool. As a starting point, you can choose one of the available game prototype templates. Code editor with debugging support is integrated. For logic, use nodes, write scripts in Haxe, or embed
+            WebAssembly code.
+          </p>
+          <ul class="uk-list">
+            <li>Rendering</li>
+            <li>Physics</li>
+            <li>Audio</li>
+            <li>Navigation</li>
+            <li>Scripting</li>
+            <li>Networking</li>
+          </ul>
+        </div>
+        <div><img src="img/Engine.jpg" alt="Armory Rendering Pipeline"></div>
+      </div>
+    </div>
+  </div>
+  <div id="platforms" class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large">
+      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
+        <div class="uk-flex-last uk-flex-first@l"><img src="img/Platforms.jpg" alt="Using Nodes from Blender in Armory"></div>
+        <div class="uk-flex-first uk-flex-last@l">
+          <h2 class="uk-heading-divider ro-text-header">No Compromises</h2>
+          <p>
+            Create live scenes and export them to desktop, web, mobile and consoles, so everyone can experience them. Binary data format, asset compression and efficient build tools are developed to prevent bloated package sizes.
+          </p>
+          <ul class="uk-list">
+            <li>Windows, Linux, Mac</li>
+            <li>HTML5</li>
+            <li>Android, iOS</li>
+            <li>PS4, Xbox One, Switch</li>
+            <li><a href="https://github.com/KTXSoftware/Kha/wiki">Complete list</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="animations" class="uk-section uk-section-secondary uk-section-medium">
+    <div class="uk-container uk-container-large">
+      <div class="uk-child-width-expand@l uk-text-center uk-text-left@l uk-grid-medium" uk-grid>
+        <div>
+          <h2 class="uk-heading-divider ro-text-header">Animation</h2>
+          <p>
+            A robust animation system is employed, with support for GPU skinning, action blending and events. On top of that, each node can be animated on timeline using keyframes, just like you are used to.
+          </p>
+          <ul class="uk-list">
+            <li>GPU dual-quaternion skinning</li>
+            <li>Instanced rendering of skinned meshes</li>
+            <li>Timeline based animation</li>
+          </ul>
+        </div>
+        <div><img src="img/Animations.jpg" alt="Armory Rendering Pipeline"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer Content -->
+  <div class="uk-section uk-section-default ro-background-darksecondary uk-light uk-section-small ro-footer">
+    <div class="uk-container uk-container-small uk-text-center uk-text-muted">
+      <div class="uk-child-width-expand uk-text-center uk-grid-small" uk-grid>
+        <div class="uk-width-1-1">Licensed under <a href="https://github.com/armory3d/armory/blob/master/LICENSE.md">zlib/libpng</a></div>
+        <div class="uk-width-1-1">Special thanks to <a href="https://blender.org">Blender</a>, <a href="http://kha.tech">Kha</a>, <a href="https://haxe.org">Haxe</a> and <a href="https://getuikit.com">UIkit</a></div>
+        <div class="uk-text-left">
+          Contribute
+          <br><a href="https://github.com/armory3d">Source Code</a>
+          <br><a href="https://github.com/armory3d/armory_docs">Documentation</a>
+          <br><a href="http://armory3d.org/community.html">Contact</a>
+        </div>
+        <div class="uk-text-right">
+          Social
+          <br><a href="https://twitter.com/armory3d">Twitter</a>
+          <br><a href="https://www.youtube.com/channel/UCo31w0CHeRGKuvJUCjU14qg">Youtube</a>
+          <br><a href="http://fb.me/armory3dengine">Facebook</a>
+          <br><a href="https://www.instagram.com/armory3d/">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js" integrity="sha256-2O4R+j0Pq+XLeUlXkPznJ0HrSkHA9keocNhV+csu6Zo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js" integrity="sha256-w38UjohynFpNOMjhZJ/oUIo/Md7D4tpQQJri5qDDTlE=" crossorigin="anonymous"></script>
 </body>
 
 </html>
