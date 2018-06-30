@@ -11,6 +11,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans">
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
+  <!-- lets make sure our anchors will always work when coming from a different page-->
+  <SCRIPT LANGUAGE=JavaScript>
+    function now() {
+      window.location.reload(true);
+    }
+  </SCRIPT>
 </head>
 
 <body class="uk-flex uk-flex-column ro-text-content" uk-height-viewport>
@@ -69,6 +75,7 @@
     </div>
     <div id="offcanvas-slide" uk-offcanvas="bg-close: true">
       <div class="uk-offcanvas-bar">
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav uk-nav-default">
           <li>
             <a href="#top" uk-scroll="duration: 500" class="uk-offcanvas-close uk-position-left uk-position-relative">Home</a>
@@ -87,9 +94,9 @@
           <li><a href="#platforms" uk-scroll="duration: 500;offset: 0">platforms</a></li>
           <li><a href="#animations" uk-scroll="duration: 500;offset: 0">Animations</a></li>
           <li class="uk-nav-divider"></li>
-          <li><a href="https://www.patreon.com/bePatron?u=3705855"><img src="img/Patron.png" alt="Patreon Pledge Badge"></a>
-          </li>
+          <li><a href="https://www.patreon.com/bePatron?u=3705855"><img src="img/Patron.png" alt="Patreon Pledge Badge"></a></li>
         </ul>
+
       </div>
     </div>
   </div>
@@ -250,6 +257,7 @@
   <!-- UIkit JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit.min.js" integrity="sha256-2O4R+j0Pq+XLeUlXkPznJ0HrSkHA9keocNhV+csu6Zo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/js/uikit-icons.min.js" integrity="sha256-w38UjohynFpNOMjhZJ/oUIo/Md7D4tpQQJri5qDDTlE=" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
